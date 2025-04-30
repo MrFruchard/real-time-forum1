@@ -1,0 +1,473 @@
+/* Réinitialisation de quelques styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Conteneur principal : occupe 90% de la fenêtre et empêche le scroll global */
+.main-container {
+    height: 90vh;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* Styles des sections */
+.section {
+    width: 20%;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    padding: 10px;
+    background-color: #0d3c59; /* Couleur bleue Twitter */
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.section-content {
+    flex: 1;
+    overflow-y: auto; /* Seule la zone interne de la section sera scrollable */
+    padding: 10px;
+}
+
+/* Colonne centrale : posts */
+.posts-container {
+    flex: 1;
+    background-color: #fff;
+}
+
+/* Utilisateurs */
+.user-item {
+    margin: 5px 0;
+}
+
+/* Style d'un post */
+.post {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Entête du post */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.post-date {
+    color: #657786; /* Gris secondaire de Twitter */
+    font-size: 0.8em;
+}
+
+/* Contenu du post : si le contenu est trop long, cette zone devient scrollable */
+.post-content {
+    margin: 5px 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Section des interactions */
+.post-interactions {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/* Boutons d'interaction */
+.post-button {
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #e1e8ed; /* Fond clair */
+    color: #14171a; /* Texte sombre */
+}
+
+.post-button.like.liked {
+    background-color: #E0245E; /* Rouge Twitter pour le like */
+    color: #fff;
+}
+
+.post-button.dislike.disliked {
+    background-color: #657786; /* Gris secondaire pour le dislike */
+    color: #fff;
+}
+
+/* Icônes */
+.icon {
+    fill: currentColor;
+}
+
+/* Section commentaires */
+.comment-section {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f5f8fa; /* Fond très clair de Twitter */
+    border-radius: 5px;
+}
+
+.comment-title {
+    font-weight: bold;
+}
+
+/* Style des messages */
+.message {
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+}
+
+/* Thème X Twitter en noir et blanc */
+.x-twitter {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Surcharge des sections */
+.x-twitter .section {
+    background-color: #f5f5f5;
+}
+
+.x-twitter .section-title {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Surcharge de la colonne centrale */
+.x-twitter .posts-container {
+    background-color: #fff;
+}
+
+/* Surcharge des posts */
+.x-twitter .post {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+/* Entête des posts */
+.x-twitter .post-header {
+    border-bottom: 1px solid #ccc;
+}
+
+/* Date du post */
+.x-twitter .post-date {
+    color: #666;
+}
+
+/* Boutons d'interaction */
+.x-twitter .post-button {
+    background-color: #ccc;
+    color: #000;
+}
+
+.x-twitter .post-button.like.liked {
+    background-color: #000;
+    color: #fff;
+}
+
+.x-twitter .post-button.dislike.disliked {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Section commentaires */
+.x-twitter .comment-section {
+    background-color: #fafafa;
+}
+
+/* Messages */
+.x-twitter .message {
+    border: 1px solid #ccc;
+}
+
+
+
+/* Conteneur principal */
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #ffffff; /* Fond blanc */
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Titre */
+#login-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Formulaire */
+#login-container form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background: #f9f9f9; /* Fond gris clair */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+#login-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Champs de saisie */
+#login-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* Placeholder */
+#login-container input::placeholder {
+    color: #666;
+}
+
+/* Bouton de connexion */
+#login-container button {
+    background-color: black; /* Bouton noir */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* Effet au survol */
+#login-container button:hover {
+    background-color: #333;
+}
+
+/* Espacement entre les éléments */
+#login-container form > * {
+    width: 100%;
+}
+
+/* Conteneur principal */
+#register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #ffffff; /* Fond blanc */
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Titre */
+#register-container h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Formulaire */
+#register-container form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background: #f9f9f9; /* Fond gris clair */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+#register-container label {
+    font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+}
+
+/* Champs de saisie */
+#register-container input,
+#register-container select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: black;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+/* Placeholder */
+#register-container input::placeholder {
+    color: #666;
+}
+
+/* Bouton d'inscription */
+#register-container button {
+    background-color: black; /* Bouton noir */
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+/* Effet au survol */
+#register-container button:hover {
+    background-color: #333;
+}
+
+/* Réduction de l'espacement */
+#register-container form > * {
+    width: 100%;
+}
+
+/* Section des commentaires */
+.comment-section {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #f5f8fa; /* Fond très clair, inspiré de Twitter */
+    border-radius: 8px;
+    border: 1px solid #e1e8ed; /* Bordure gris clair */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Titre des commentaires (cliquable) */
+.comment-title {
+    font-weight: bold;
+    cursor: pointer;
+    color: #000000; /* Bleu Twitter */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.comment-title:hover {
+    text-decoration: underline;
+}
+
+/* Conteneur des commentaires */
+.comments-container {
+    display: none; /* Masqué au départ */
+    padding-top: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Un commentaire individuel */
+.comment {
+    padding: 6px 10px;
+    margin: 5px 0;
+    background: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #14171a;
+    transition: background 0.3s ease-in-out;
+}
+
+.comment:hover {
+    background: #f0f0f0;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comments-container.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.conversation {
+    position: relative; /* S'assure que le dot est bien placé */
+}
+
+.notification-dot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: lightblue;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.conversation {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    background: #000000FF;
+    color: white;
+    transition: background 0.3s;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.conversation:hover {
+    background: #3a3b3c;
+}
+
+.conversation-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.last-message {
+    font-size: 14px;
+    color: #b0b3b8;
+    margin-bottom: 4px;
+}
+
+.message-date {
+    font-size: 12px;
+    color: #b0b3b8;
+    align-self: flex-end;
+}
+
